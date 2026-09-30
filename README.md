@@ -67,3 +67,47 @@ Cloud Sync troubleshooting included reviewing provisioning logs, verifying provi
 ## Skills Demonstrated
 
 Active Directory Administration • Windows Server • Group Policy • DNS • Identity and Access Management • User and Group Administration • SMB • NTFS Permissions • Least-Privilege Access • Windows Troubleshooting • Event Viewer • Microsoft Entra ID • Microsoft Entra Cloud Sync • Hybrid Identity • Password Hash Synchronization
+
+## Lab Evidence
+
+The following screenshots document the configuration and validation of the hybrid Windows enterprise environment.
+
+### Active Directory Administration
+Organizational units, domain users, and security groups configured within the `mendoza.local` domain.
+
+![Active Directory OU and Security Group Administration](screenshots/Active%20Directory%20-%20OU%20%26%20Security%20Group%20Administration.png)
+
+### Group Policy Configuration
+Department-specific Group Policy Objects configured to automate network drive mappings.
+
+![Group Policy Department Drive Mapping](screenshots/Group%20Policy%20-%20Department%20Drive%20Mapping.png)
+
+### NTFS Permissions
+NTFS permissions configured using Active Directory security groups to provide department-based access.
+
+![NTFS Permissions](screenshots/NTFS%20Permissions%20-%20Sales%20Security%20Group.png)
+
+### SMB File Share Access
+Successful access to the Sales SMB share from the domain-joined Windows 11 workstation.
+
+![SMB Sales Share Access](screenshots/SMB-Sales-Share-Access.png)
+
+### Automated Drive Mapping
+Sales network drive automatically mapped on the domain client through Group Policy.
+
+![GPO Drive Mapping](screenshots/GPO-DriveMapping.png)
+
+### Group Policy Validation
+`gpresult` confirms that the Sales Drive Mapping GPO was successfully applied to the Sales user.
+
+![Group Policy Result](screenshots/GroupPolicyResult.png)
+
+### Hybrid Identity Validation
+The domain client recognizes the user's on-premises Active Directory identity and synchronized Microsoft Entra UPN.
+
+![Hybrid Identity Validation](screenshots/ValidationEntra.png)
+
+### Microsoft Entra ID Synchronization
+On-premises Active Directory users successfully provisioned into Microsoft Entra ID through Microsoft Entra Cloud Sync.
+
+![Microsoft Entra ID Synchronized Users](screenshots/entra-synchronized-users.png)
